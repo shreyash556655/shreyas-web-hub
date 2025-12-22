@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Your Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="get-website.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Get Your Website</h2>
+
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Your Phone Number" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="details" placeholder="Describe your website" required></textarea>
+
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+
+  <script src="get-website.js"></script>
+</body>
+</html>

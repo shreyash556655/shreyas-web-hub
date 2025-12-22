@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  padding: 50px 20px;
+  background: linear-gradient(270deg, #2563eb, #38bdf8, #1e40af);
+  background-size: 600% 600%;
+  animation: gradientMove 8s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+header h1,
+header p {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #38bdf8;
+  color: #020617;
+  box-shadow: 0 0 20px rgba(56,189,248,0.8);
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(56,189,248,1);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #38bdf8;
+}
+
+.btn.secondary:hover {
+  background: #38bdf8;
+  color: #020617;
+}
+
+/* Top glowing layer */
+.top-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(56,189,248,0.25), transparent 60%);
+  animation: glowMove 8s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  background: #020617;
+  padding: 12px;
+}
+
+nav a {
+  color: #e5e7eb;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #020617;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(56,189,248,0.15);
+}
+
+/* ---------- SERVICES ---------- */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.service-box {
+  background: #020617;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.service-box h3 {
+  color: #38bdf8;
+}
+
+/* ---------- 3D LAPTOP ---------- */
+.laptop-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.laptop-3d {
+  width: 220px;
+  height: 160px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+  filter: drop-shadow(0 0 30px rgba(56,189,248,0.7));
+}
+
+.screen {
+  width: 220px;
+  height: 140px;
+  background: radial-gradient(circle at top, #38bdf8, #020617);
+  border-radius: 10px;
+  transform: rotateX(10deg) translateZ(20px);
+  box-shadow: 0 0 30px rgba(56,189,248,0.9), inset 0 0 25px rgba(56,189,248,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: screenGlow 3s infinite alternate;
+}
+
+.screen-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e0f2fe;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8, 0 0 40px #0ea5e9;
+  animation: textGlow 2s infinite alternate;
+  transform: translateZ(25px);
+}
+
+.base {
+  width: 220px;
+  height: 20px;
+  background: #020617;
+  border-radius: 0 0 14px 14px;
+  position: absolute;
+  bottom: -14px;
+  transform: rotateX(-70deg) translateZ(-10px);
+  box-shadow: 0 0 15px rgba(56,189,248,0.4);
+}
+
+footer {
+  margin-top: 50px;
+  padding: 15px;
+  background: #020617;
+  opacity: 0.8;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glowMove {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes screenGlow {
+  from { box-shadow: 0 0 20px rgba(56,189,248,0.6); }
+  to { box-shadow: 0 0 45px rgba(56,189,248,1); }
+}
+
+@keyframes textGlow {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
