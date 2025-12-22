@@ -12,7 +12,8 @@ function sendToWhatsApp() {
     "📝 Website Details:%0A" + details;
 
   let whatsappURL =
-    "https://wa.me/17709073640?text=" + message;
+  "https://wa.me/919156474904?text=" + message;
+
 
   window.open(whatsappURL, "_blank");
 }
